@@ -15,7 +15,7 @@ Client SDKs
 *****************
 We provide SDKs for the following languages
 
-* `Javascript/Node.js (with Typescript Support) <https://readthedocs.org/projects/sportstalk-sdk-javascript/>`_
+* `Javascript/Node.js (with Typescript Support) <https://sportstalk-sdk-javascript.readthedocs.io/en/latest/>`_
 * `Swift (iOS) <https://sportstalk-ios-sdk.readthedocs.io/en/latest/>`_
 * `Kotlin (Android) <https://sdk-android-kotlin.readthedocs.io/>`_
 
