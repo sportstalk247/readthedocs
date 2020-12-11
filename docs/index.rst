@@ -156,7 +156,8 @@ INTERPRETING EVENT PROPERTIES
 +--------------------+------------------------------------------------------------------------------------------------------------+
 | body               | The body of the event, used by displayable events like "speech" or quoted reply.                           |
 +--------------------+------------------------------------------------------------------------------------------------------------+
-| originalbody       | The original body of the event, as sent by the user. This is empty if the body was not modified. The body  |
+| originalbody       | The original body of the event, as sent by the user.                                                       |
+|                    | This is empty if the body was not modified. The body                                                       |
 |                    | is modified if censoring is enabled and the body contained profanity, or if a moderator altered the body.  |
 +--------------------+------------------------------------------------------------------------------------------------------------+
 | deleted            | The event is logically deleted, but it has threaded replies that may be displayed                          |
