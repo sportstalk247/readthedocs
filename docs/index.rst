@@ -192,7 +192,7 @@ EVENT TYPES
 |--------------|-----------------------------------------------------------------------------------------|-------------|
 | unknown      | Ignore this event                                                                       | NO          |
 | custom       | Indicates this is a custom event. In this case user is providing a                      | YES         |
-|              | custom type value.                                                                     |             |
+|              | custom type value.                                                                      |             |
 | announcement | Indicates the message is an announcement                                                | YES         |
 | speech       | The user said something in chat                                                         | YES         |
 | reply        | The user issued a threaded reply to another event. Display the reply.                   | YES         |
