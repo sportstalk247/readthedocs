@@ -28,8 +28,6 @@ In all platforms it's possible to use the REST API directly.
 Getting Started With Chat
 ==========================
 
-When implementing chat, follow these steps.
-
 CONCEPTS
 --------
 
@@ -146,6 +144,7 @@ The normal use case for a chat application when you open a chat room is you:
 
 INTERPRETING EVENT PROPERTIES
 -----------------------------
+
 +---------------------------------------------------------------------------------------------------------------------------------+
 | PROPERTY           | MEANING                                                                                                    |
 +====================|============================================================================================================+
@@ -154,7 +153,7 @@ INTERPRETING EVENT PROPERTIES
 | roomid             | The ID of the room in which the event was emitted                                                          |
 | body               | The body of the event, used by displayable events like "speech" or quoted reply.                           |
 | originalbody       | The original body of the event, as sent by the user. This is empty if the body was not modified. The body  |
-                       is modified if censoring is enabled and the body contained profanity, or if a moderator altered the body.
+|                    | is modified if censoring is enabled and the body contained profanity, or if a moderator altered the body.  |
 | deleted            | The event is logically deleted, but it has threaded replies that may be displayed                          |
 | added              | When the event was emitted. ISO 8601 time format, in UTC time.                                             |
 | modified           | When the event was lasted modified. ISO 8601 time format, in UTC time.                                     |
@@ -193,16 +192,16 @@ EVENT TYPES
 |--------------|-----------------------------------------------------------------------------------------|-------------|
 | unknown      | Ignore this event                                                                       | NO          |
 | custom       | Indicates this is a custom event. In this case user is providing a                      | YES         |
-                 custom type value.
+|              | custom type value.                                                                     |             |
 | announcement | Indicates the message is an announcement                                                | YES         |
 | speech       | The user said something in chat                                                         | YES         |
 | reply        | The user issued a threaded reply to another event. Display the reply.                   | YES         |
 | quote        | The user quoted something someone else said in another event.                           | YES         |
-                 Display the quoted reply.
+|              | Display the quoted reply.                                                               |             |
 | reaction     | The user reacted to an event previously emitted. Update that event in your UI           | NO          |
-                 to display the updated reaction information.
+|              | to display the updated reaction information.                                            |             |
 | replace      | The event is replaced with a new version of the event. The updated copy is in           | NO          |
-                 the replyto field. This is only emitted for displayabe event types.
+|              | the replyto field. This is only emitted for displayabe event types.                     |             |
 | remove       | The referenced event (via parentid field) is to be removed from the chat stream UI      | NO          |
 | purge        | Remove all events from the specified user                                               | NO          |
 | ad           | Display an advertisement                                                                | YES         |
