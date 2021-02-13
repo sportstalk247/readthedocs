@@ -24,6 +24,7 @@ The client SDKs are wrappers around the REST API and provide convenience functio
 The iOS and Android SDKs currently contain only chat functionality.  The Javascript SDK has clients for chat and comments.
 In all platforms it's possible to use the REST API directly.
 
+Does this show?
 
 
 CHAT CONCEPTS
