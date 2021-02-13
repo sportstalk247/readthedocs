@@ -44,6 +44,7 @@ CHAT CONCEPTS
 
 CHAT EFFECTS
 ____________
+
 Various effects can be applied users on either the global level or the individual chat room level. This allows you to have moderators who can restrict a user in one context without barring the user from another context. For example, if you are implementing a club experience, the user could be removed from one club but participate in another club.
 
 ROOM LEVEL EFFECTS
@@ -56,6 +57,7 @@ ROOM LEVEL EFFECTS
 
 GLOBAL LEVEL EFFECTS
 ++++++++++++++++++++
+
 * **banned** : The user is banned from all talk experiences including chat and comments. The user may read comments but cannot interact with them. The user should not be allowed to read content in chat rooms. The user does not appear in the participant list of a chat room and can not interact with the room.
 * **flagged** : A user becomes flagged when other users report the user too many times using the user level report user API. Room level reports do not flag users on the global level. A flagged user has the shadowban effect applied.
 * **mute** : The user is in a read-only mode for all chat rooms. The user can join a chat room and read messages. If the user tries to do so, the user will receive an error message. The user cannot contribute anything to the chat room, such as speech, replies, or reactions. This may be applied forever or for a specified number of seconds. The user does appear in the participant list.
@@ -63,6 +65,7 @@ GLOBAL LEVEL EFFECTS
 
 CURSORING
 ---------
+
 The API uses cursoring which is different from pagenation.  The idea of the cursor is you can call the list function without a cursor to get an initial result set, and then call it again to read more items from the list. This way, as more data is flowing into the system, you can always continue from where you left of to read the latest data.
 
 All of the list method return a cursor object.  The cursor object contains:
