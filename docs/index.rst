@@ -25,8 +25,6 @@ The iOS and Android SDKs currently contain only chat functionality.  The Javascr
 In all platforms it's possible to use the REST API directly.
 
 
-
-
 CHAT CONCEPTS
 -------------
 
@@ -43,7 +41,7 @@ CHAT CONCEPTS
 * Details methods in the API return a single object
 * List methods in the API return a cursor object
 
-CHA USER EFFECTS
+CHAT USER EFFECTS
 ++++++++++++++++++
 
 Various effects can be applied users on either the global level or the individual chat room level. This allows you to have moderators who can restrict a user in one context without barring the user from another context. For example, if you are implementing a club experience, the user could be removed from one club but participate in another club.
