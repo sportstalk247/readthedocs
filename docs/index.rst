@@ -18,6 +18,7 @@ We provide SDKs for the following languages:
 * `Javascript/Node.js (with Typescript Support) <https://sportstalk-sdk-javascript.readthedocs.io/en/latest/>`_
 * `Swift (iOS) <https://sportstalk-ios-sdk.readthedocs.io/en/latest/>`_
 * `Kotlin (Android) <https://sdk-android-kotlin.readthedocs.io/>`_
+* `React Drop-in Widget <https://sportstalk-widget.readthedocs.io/en/latest/>`_
 
 The client SDKs are wrappers around the REST API and provide convenience functionality to make development easier.  It is always possible to drop back into the REST API directly if you need special functionality.
 
