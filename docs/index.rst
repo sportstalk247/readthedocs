@@ -301,3 +301,32 @@ DELETING EVENTS
 * If you use the flag *permanentifnoreplies*=true and you delete a reply, if its parent no longer has any replies and is also logically deleted then the parent will also be permanently deleted.
 * If an event is permanently deleted, a REMOVE event will be raised in the room notifying you to remove the deleted event from your user interface.
 * If an event is logically deleted, it will be modified, and a REPLACE event will be sent to update it.
+
+
+Security
+------------------
+You can enable additional security as an Organization setting using the management API. In most cases, the SportsTalk team will enable this for you.
+
+With additional security enabled, Applications will require a signed JWT to be sent in the Authorization header as part of requests. That JWT is signed with a secret you can get from the security settings API.
+
+Sample code to generate a signed JWT:
+
+.. code-block:: javascript
+
+    const jwt = require('jsonwebtoken');
+
+    function createUserToken(userid, SHARED_SECRET, durationMinutes, applicationIDs) {
+        const options = {
+            algorithm: 'HS256'
+        }
+        const payload = {
+            userid,
+            exp: Math.floor(Date.now() / 1000) + (60 * (durationMinutes || 60)),
+        }
+        // if you specify application IDs, the JWT will be limited to those applications.
+        if(applicationIDs) {
+            payload.aud = [].concat(applicationIDs);
+        }
+        const user_token = jwt.sign(payload, SHARED_SECRET, options);
+        return user_token
+    }
